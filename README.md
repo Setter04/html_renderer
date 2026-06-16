@@ -20,12 +20,15 @@ Kein Server, kein npm, kein Setup.
 
 ## Repo-Inhalt
 
-| Datei | Beschreibung |
+## Repo-Inhalt
+
+| Datei / Ordner | Beschreibung |
 |---|---|
 | `aissist-prototype-renderer.html` | Der Renderer — standalone, läuft direkt im Browser |
 | `DESIGN-SYSTEM.md` | Designsystem: Tokens, Komponenten, Vuetify-Mapping, Governance |
 | `LAYOUT-PRESETS.md` | Layout-Presets und Slot-Referenz |
 | `features/` | Optionaler Ordner für YAML-Feature-Dateien (Methode B) |
+| `skill.md` | Agent Skill — enthält `SKILL.md`, Renderer-Kopie, Docs und Deploy-Script |
 
 ---
 
@@ -113,15 +116,20 @@ bestehenden Tokens sind nicht erlaubt.
 
 ---
 
-## Claude Skill
+## Agent Skill
 
-Für das AISSIST-Team gibt es einen Claude Skill (`aissist-prototyping`), der diesen
-Workflow unterstützt: Feature-Briefing → Fit-Check → YAML-Generierung → Deployment-Anweisung.
+Im Ordner `aissist-prototyping/` liegt ein installierbarer Skill für diesen Workflow:
+Feature-Briefing → Fit-Check → YAML-Generierung → Deployment-Anweisung.
 
-Der Skill liegt im Repo `aissist-skills` und enthält `DESIGN-SYSTEM.md` und
-`LAYOUT-PRESETS.md` als lokale Snapshots.
+Der Skill enthält `DESIGN-SYSTEM.md` und `LAYOUT-PRESETS.md` als lokale Snapshots
+sowie ein Deploy-Script für den lokalen HTTP-Server. Er ist agent-unabhängig und
+funktioniert in jedem Kontext, der das Skill-Format unterstützt.
 
 ---
+
+## Stack
+
+Vue 3 · Vuetify 3 · js-yaml — alles via CDN, kein Build-Schritt.
 
 ## Stack
 
