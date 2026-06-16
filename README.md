@@ -130,7 +130,3 @@ funktioniert in jedem Kontext, der das Skill-Format unterstützt.
 ## Stack
 
 Vue 3 · Vuetify 3 · js-yaml — alles via CDN, kein Build-Schritt.
-
-## Stack
-
-Vue 3 · Vuetify 3 · js-yaml — alles via CDN, kein Build-Schritt.
